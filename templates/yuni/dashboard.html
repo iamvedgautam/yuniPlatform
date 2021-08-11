@@ -1,0 +1,57 @@
+{% extends 'base_v1.html' %}
+{% load static %}
+  
+{% block content %}
+<style type="text/css">
+      #map {
+        height: 400px;
+        width: 99%;
+        border-radius: 1rem;
+      }
+    </style>
+<script src="{% static 'js/yuni/dashboard.js' %}"></script>
+<script src="{% static 'js/chart.min.js' %}"></script>
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col col-md-5">
+      <div class="card">
+        <canvas id="charts-1" class="cv" ></canvas>
+      </div>
+    </div>
+    <div class="col col-md-5">
+      <div class="card">
+        <canvas id="charts-2" class="cv" ></canvas>
+      </div>
+    </div>
+    <div class="col col-md-5">
+      <div class="card">
+        <canvas id="charts-3" class="cv" ></canvas>
+      </div>
+    </div>
+    <div class="col col-md-5">
+      <div class="card">
+        <canvas id="charts-4" class="cv" ></canvas>
+      </div>
+    </div>
+    <div class="col col-md-5">
+      <div class="card">
+        <canvas id="charts-5" class="cv" ></canvas>
+      </div>
+    </div>
+    <div class="col col-md-5">
+      <div class="card">
+        <canvas id="charts-6" class="cv" ></canvas>
+      </div>
+    </div>
+  </div>
+    <!--The div element for the map -->
+  <div class="card-store">
+    <h4>Store Location</h4>
+    <div id="map"></div>
+  </div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByzg2B-Utw25UJXX3gBTJAAkYnQCppPFc&callback=initMap&ver=4.7.4:47:499"
+      async
+    ></script>
+  {% include 'partials/messages.html' %}
+{% endblock %}

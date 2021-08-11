@@ -1,0 +1,49 @@
+{% extends 'base_v1.html' %}
+{% load static %}
+  
+{% block content %}
+<script src="{% static 'js/yuni/asset.js' %}"></script>
+<script src="{% static 'js/chart.min.js' %}"></script>
+
+<!-- TODO: Hard Coded Connect to db -->
+<div class="asset-select">
+  <select class="form-select form-select-lg mb-3 btn btn-primary" aria-label="Default select example">
+    <option selected value="1">Demo Bangalore 1</option>
+    <option value="2">Demo Bangalore 2</option>
+  </select>
+</div>
+<!-- Plots -->
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col col-md-5">
+    <div class="card">
+      <canvas id="charts-1" class="cv" ></canvas>
+    </div>
+  </div>
+  <div class="col col-md-5">
+    <div class="card">
+      <canvas id="charts-2" class="cv" ></canvas>
+    </div>
+  </div>
+  <div class="col col-md-5">
+    <div class="card">
+      <canvas id="charts-3" class="cv" ></canvas>
+    </div>
+  </div>
+  <div class="col col-md-5">
+    <div class="card">
+      <canvas id="charts-4" class="cv" ></canvas>
+    </div>
+  </div>
+  <div class="col col-md-5">
+    <div class="card">
+      <canvas id="charts-5" class="cv" ></canvas>
+    </div>
+  </div>
+  <div class="col col-md-5">
+    <div class="card">
+      <canvas id="charts-6" class="cv" ></canvas>
+    </div>
+  </div>
+</div>
+  {% include 'partials/messages.html' %}
+{% endblock %}

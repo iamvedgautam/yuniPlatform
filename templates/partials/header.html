@@ -1,0 +1,39 @@
+{% load static %} 
+<header>
+    <div class="sidebar-toggle">
+      <h2>
+        <button class="togglebtn" id="inputmaptoggle">
+          <i class="las la-lg la-bars"></i>
+        </button>
+      </h2>
+    </div>
+    <div class="pageHeader">
+      <h2>
+        Dashboard
+      </h2>
+    </div>
+    <div class="user-wrapper">
+      <!-- <div> -->
+      <div class="dropdown">
+        <h2><button class="dropbtn"><i class="las la-lg la-bars"></i></button></h2>
+        <div class="dropdown-content">
+          <form action="" method="GET">
+            {% csrf_token %}
+            <input type="submit" id="nav-link-Admin" value="Admin">
+          </form>
+          <form action="" method="GET">
+            {% csrf_token %}
+            <input type="submit" id="nav-link-Documentation" value="Documentation">
+          </form>
+          <form action="{% url 'logout' %}" method="GET">
+            {% csrf_token %}
+            <input type="submit" id="nav-link-Logout" value="Logout">
+          </form>
+        </div>
+      </div>
+        <!-- <h2>
+          < href=""><span class="las la-bars"></span></a>
+        </h2>
+      </div> -->
+    </div>
+  </header>

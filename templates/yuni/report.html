@@ -1,0 +1,44 @@
+{% extends 'base_v1.html' %}
+{% load static %}
+  
+{% block content %}
+<script src="{% static 'js/yuni/report.js' %}"></script>
+  <div class="card-report">
+    <form class="form-group row">
+      <label class="col-2 col-form-label" for="inlineFormCustomSelect">Report Type:</label>
+      <div class="col-4">
+        <select class="custom-select" id="inlineFormCustomSelect">
+          <option selected>Choose...</option>
+          <option value="1" id="1">Best of Best Benchmarking</option>
+          <option value="2" id="2">Intelligence Report</option>
+        </select>
+      </div>
+    </form>
+    <form class="form-group row" id="asset-select">
+      <label class="col-2 col-form-label" for="inlineStoreCustomSelect">Store:</label>
+      <div class="col-4">
+        <select class="custom-select" id="inlineStoreCustomSelect">
+          <option selected>Choose...</option>
+          <option value="1">Demo Bangalore 1</option>
+          <option value="2">Demo Bangalore 2</option>
+        </select>
+      </div>
+    </form>
+    <form class="form-group row">
+      <label class="col-2 col-form-label">From Date:</label>
+      <div class="col-4">
+        <input type="date" name="" max="" id="fromDate">
+      </div>
+    </form>
+    <form class="form-group row">
+      <label class="col-2 col-form-label">To Date:</label>
+      <div class="col-4">
+        <input type="date" name="" max="" id="toDate">
+      </div>
+    </form>
+    <button type="submit" class="btn btn-primary report-submit">Download</button>
+  </div>
+
+  <script src="{% static 'js/yuni/report.js' %}"></script>
+  {% include 'partials/messages.html' %}
+{% endblock %}

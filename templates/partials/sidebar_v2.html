@@ -1,0 +1,38 @@
+{% load static %} 
+<div class="sidebar">
+    <!-- Add Yuni yuni_logo here -->
+    <div class="sidebar-brand">
+      <h2>
+        <!-- <img src="img/img/yuni_logo.jpg" height="60" width="120"> -->
+        Yuni
+      </h2>
+    </div>
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a href="{% url 'dashboard' %}" class="dashboard">
+            <span class="las la-diagnoses"></span>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'asset' %}" class="asset">
+            <span class="las la-home"></span>
+            Asset
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'analysis' %}" class="analysis">
+            <span class="las la-chart-bar"></span>
+            Analysis
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'report' %}" class="report">
+            <span class="las la-file"></span>
+            Report Generate
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>

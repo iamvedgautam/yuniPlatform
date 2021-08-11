@@ -1,0 +1,42 @@
+{% extends 'base_auth.html' %}
+{% load static %}
+
+{% block content %}
+<div class="sticky-top">
+    <div class="row">
+    <div class="col-md-7"></div>
+    <div class="col-md-3">
+        <div class="card mt-5">
+            <div class="card-body">
+                <div class="card-title py-1 text-center">
+                    <img src="{% static 'img/yuni_logo.jpg' %} " width="150" height="80">
+                    <br>
+                    <br>
+                    <h4>Join Us</h4>
+                </div>
+                <form action="{% url 'register' %}" method="post">
+                    {% csrf_token %}
+                    {% include 'partials/messages.html' %}
+
+                    <div class="form-group">
+                        <input type="text" name="Company name" placeholder="Company Name" id="companyNameField" class="form-control form-control-sm">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email ID" id="emailFeild" class="form-control form-control-sm">
+                    </div>
+                    <div class="invalid-feedback" style="display:none">
+                        
+                    </div>
+                    <a class="btn btn-sm btn-secondary py-1" style="font-size: 0.8em;" role="button" href="{% url 'login' %}">SignIn</a>
+                    <br><br>
+                    <input type="submit" value="Register", class="btn btn-block btn-primary submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5"></div>
+    </div>
+</div>
+
+<script src="{% static 'js/register.js' %}"></script>
+{% endblock content %}
